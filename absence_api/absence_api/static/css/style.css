@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background: #9CB018;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+}
+
+.form-card {
+    width: 420px;
+    border-radius: 12px;
+    background: #F5F7E6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-banner {
+    background: #596505;
+    color: #fff;
+    padding:20px 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.form-title {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.form-icon {
+    font-size: 4.5rem;
+    color: #9CB018;
+    border: solid 8px #9CB018;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-body {
+    padding: 20px 30px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-browse-btn {
+    border-bottom: 2px solid #9CB018;
+}
+
+.form-browse-btn::file-selector-button {
+    background: none;
+    color: #9CB018;
+    /* padding: 10px 30px;
+    font-size: 1.1rem; */
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.submit-btn {
+    background: #596505;
+    color: white;
+    padding: 10px 40px;
+    /* font-size: 1.1rem; */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.submit-btn:hover {
+    background: #7B8C08;
+}

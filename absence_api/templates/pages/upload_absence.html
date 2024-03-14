@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8822e9b1d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-card">
+            <div class="form-banner">
+                <h1 class="form-title">upload files</h1>
+            </div>
+            <div class="form-body">
+                <div class="form-icon">
+                    <i class="fa-solid fa-upload"></i>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    <div>
+                        {% csrf_token %}
+                        {{ form }}
+                        <input type="submit" value="Save" class="submit-btn">
+        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
