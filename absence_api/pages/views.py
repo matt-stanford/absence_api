@@ -11,7 +11,15 @@ import pandas as pd
 import io
 
 class AbsenceCreateView(generics.ListCreateAPIView):
-    queryset = Absence.objects.all()
+    def get_queryset(self):
+        queryset = Absence.objects.all()
+        start_date = self.request.query_params.get('start_date', None)
+        end_date = self.request.query_params.get('end_date', None)
+        if start_date and end_date:
+            queryset = queryset.filter(absence_date__range=[start_date, end_date])
+        return queryset
+
+    
     serializer_class = AbsenceSerializer
         
 
